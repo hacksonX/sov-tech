@@ -1,0 +1,186 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Stocks",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "localhost:3001/users": {
+      "get": {
+        "description": "",
+        "summary": "GetAllUsers",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful"
+          },
+          "401": {
+            "description": "authorization failed"
+          },
+          "422": {
+            "description": "validation failed"
+          },
+          "500": {
+            "description": "unknown server error"
+          }
+        },
+        "security": []
+      },
+      "post": {
+        "description": "",
+        "summary": "AddUser",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful"
+          },
+          "401": {
+            "description": "authorization failed"
+          },
+          "422": {
+            "description": "validation failed"
+          },
+          "500": {
+            "description": "unknown server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "first_name": "Jane",
+                  "last_name": "Smith",
+                  "id_number": "1011125697081",
+                  "phone": "0831239292"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      },
+      "search": {
+        "description": "",
+        "summary": "Search",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful"
+          },
+          "401": {
+            "description": "authorization failed"
+          },
+          "422": {
+            "description": "validation failed"
+          },
+          "500": {
+            "description": "unknown server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "last_name": "Doe"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    },
+    "localhost:3001/users/9203025697081": {
+      "delete": {
+        "description": "",
+        "summary": "Remove",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful"
+          },
+          "401": {
+            "description": "authorization failed"
+          },
+          "422": {
+            "description": "validation failed"
+          },
+          "500": {
+            "description": "unknown server error"
+          }
+        },
+        "security": []
+      }
+    },
+    "localhost:3001/users/0001121221080": {
+      "patch": {
+        "description": "",
+        "summary": "Update",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful"
+          },
+          "401": {
+            "description": "authorization failed"
+          },
+          "422": {
+            "description": "validation failed"
+          },
+          "500": {
+            "description": "unknown server error"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "first_name": "Johnny",
+                  "last_name": "Doe",
+                  "id_number": "0001121221080",
+                  "phone": "0821234567",
+                  "physical_address": "1 Fountain road, Johannesburg"
+                }
+              }
+            }
+          }
+        },
+        "security": []
+      }
+    }
+  },
+  "servers": [
+    {
+      "description": "Base Environment",
+      "variables": {}
+    },
+    {
+      "description": "Develop",
+      "variables": {}
+    }
+  ],
+  "tags": [],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+Application will start up with one user loaded.
+
+To start up the API, run:
+
+$ npm i
+$ npm run serve
+
+The app will be served on localhost:3001
+
+Once running the following the follwing methods are available
+
+Get /users - Gets all users
+Seach /users - Search by first_name, id_number and/or _phone
+Patch /users/:id_number - Update using ID number
+Delete /users/:id_number - Delete by ID number
+Post /users - Add a new user
+
+To run test by starting up a server and testing run
+
+$ npm run test
+
+Included an Open API Spec file
